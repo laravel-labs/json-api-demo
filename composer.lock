@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e121cfec4f9e137f13f96f56fef7523",
+    "content-hash": "13ac2a58a62d98f77d79fbe450494725",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1293,16 +1293,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.37.0",
+            "version": "dev-json-api-resource-relations",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3c3c4ad30f5b528b164a7c09aa4ad03118c4c125"
+                "reference": "1fcd9a7cd3ecc6ccd5f3d3c6b0382226afeee3fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3c3c4ad30f5b528b164a7c09aa4ad03118c4c125",
-                "reference": "3c3c4ad30f5b528b164a7c09aa4ad03118c4c125",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1fcd9a7cd3ecc6ccd5f3d3c6b0382226afeee3fe",
+                "reference": "1fcd9a7cd3ecc6ccd5f3d3c6b0382226afeee3fe",
                 "shasum": ""
             },
             "require": {
@@ -1508,7 +1508,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-11-04T15:39:33+00:00"
+            "time": "2025-11-06T06:13:53+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -8803,9 +8803,18 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "laravel/framework",
+            "version": "dev-json-api-resource-relations",
+            "alias": "12.999.999",
+            "alias_normalized": "12.999.999.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "laravel/framework": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
