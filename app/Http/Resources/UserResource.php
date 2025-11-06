@@ -7,6 +7,9 @@ use Illuminate\Http\Resources\JsonApi\JsonApiResource;
 
 class UserResource extends JsonApiResource
 {
+    /**
+     * The resource's relationships.
+     */
     public function toRelationships(Request $request)
     {
         return [
