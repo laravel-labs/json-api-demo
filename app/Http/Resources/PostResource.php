@@ -14,6 +14,7 @@ class PostResource extends JsonApiResource
     protected array $relationships = [
         'comments',
         'user',
+        'tags',
     ];
 
     /**

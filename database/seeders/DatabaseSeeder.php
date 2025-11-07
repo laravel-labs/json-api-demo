@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\TeamRole;
 use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\Team;
 use App\Models\User;
 use App\Models\UserProfile;
@@ -46,5 +47,10 @@ class DatabaseSeeder extends Seeder
             'post_id' => $posts->first()->getKey(),
             'user_id' => $user->getKey(),
         ]);
+
+        $openSourceTag = Tag::factory()->create(['name' => 'Open Source']);
+        $forgeTag = Tag::factory()->create(['name' => 'Forge']);
+
+        $posts->first()->tags()->attach([$openSourceTag]);
     }
 }
