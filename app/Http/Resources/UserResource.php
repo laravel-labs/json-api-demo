@@ -13,8 +13,10 @@ class UserResource extends JsonApiResource
     public function toRelationships(Request $request)
     {
         return [
+            'comments',
             'posts',
             'profile',
+            'reactions',
             'teams',
         ];
     }

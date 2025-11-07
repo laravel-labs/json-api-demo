@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\TeamRole;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Team;
 use App\Models\User;
@@ -35,6 +36,15 @@ class DatabaseSeeder extends Seeder
         $user->teams()->attach($team, ['role' => TeamRole::MEMBER]);
         
         User::factory(10)->create();
-        Post::factory(50)->create();
+        $posts = Post::factory(50)->create();
+
+        tap($posts->first(), function (Post $post) use ($user) {
+            $post->user_id = $user->getKey();
+        })->save();
+
+        Comment::factory()->create([
+            'post_id' => $posts->first()->getKey(),
+            'user_id' => $user->getKey(),
+        ]);
     }
 }
